@@ -1,6 +1,6 @@
 # Hackmiami - Discord bot presentation
 
-update token and GUILD_ID in config/config.py
+update TOKEN, GUILD_ID and ROLE_ID in config/config.py
 
 
 ## Other examples from the developer
