@@ -1,0 +1,7 @@
+lib64/**/__pycache__/
+lib/**/__pycache__/
+**/__pycache__/
+*.py[cod]
+.DS_Store
+**/.DS_Store
+logs/*.log

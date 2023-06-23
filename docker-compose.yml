@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Docker/Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./logs:/var/log
+    tty: true
