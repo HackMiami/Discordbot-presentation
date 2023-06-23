@@ -1,5 +1,9 @@
 # Hackmiami - Discord bot presentation
 
+Slides
+https://docs.google.com/presentation/d/1xCEXvK5QcWgNO2mXJpSJKhHBGgcWbjrS-784hCxUAzI/edit?usp=sharing
+
+
 update TOKEN, GUILD_ID and ROLE_ID in config/config.py
 
 
@@ -13,18 +17,21 @@ https://discord.gg/dpy
 
 ## With Docker compose
 
+```
 docker compose build
 docker compose up -d
 docker compose logs
-
+```
 ### if you want to jump into the image to test
+```
 docker compose exec -it bot bash
-
+```
 ## Without docker compose
 
+```
 docker build -f Docker/Dockerfile -t -t doscord-bot:latest .
 docket run -rm doscord-bot -v logs:/var/logs
-
+```
 
 ## Without docker
 
