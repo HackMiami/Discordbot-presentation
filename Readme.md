@@ -1,15 +1,15 @@
 # Hackmiami - Discord bot presentation
 
-Slides
-https://docs.google.com/presentation/d/1xCEXvK5QcWgNO2mXJpSJKhHBGgcWbjrS-784hCxUAzI/edit?usp=sharing
+Slides:
+
+- https://docs.google.com/presentation/d/1xCEXvK5QcWgNO2mXJpSJKhHBGgcWbjrS-784hCxUAzI/edit?usp=sharing
 
 
-update TOKEN, GUILD_ID and ROLE_ID in config/config.py
-
+To use this on your server update TOKEN, GUILD_ID and ROLE_ID in config/config.py
+Enjoy and happy programming
 
 ## Other examples from the developer
 https://github.com/Rapptz/discord.py/tree/master/examples
-
 
 Joing the discord.py server
 https://discord.gg/dpy
