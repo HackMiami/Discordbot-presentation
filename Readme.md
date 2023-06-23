@@ -31,8 +31,8 @@ docker compose exec -it bot bash
 ## Without docker compose
 
 ```
-docker build -f Docker/Dockerfile -t -t doscord-bot:latest .
-docket run -rm doscord-bot -v logs:/var/logs
+docker build -f Docker/Dockerfile -t discord-bot:latest .
+docker run --rm -v logs:/var/logs discord-bot
 ```
 
 ## Without docker
