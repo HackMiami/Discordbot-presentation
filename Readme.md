@@ -26,28 +26,9 @@ docker build -f Docker/Dockerfile -t -t doscord-bot:latest .
 docket run -rm doscord-bot -v logs:/var/logs
 
 
+## Without docker
 
-hackmiami-discord/
-├── Docker/
-│   └── Dockerfile
-├── docker-compose.yml
-├── logs/
-│   ├── bot.log
-│   └── supervisord.log
-├── opt/
-│   ├── app/
-│   │   ├── cogs/
-│   │   │   ├── BotHelp.py
-│   │   │   ├── OnJoin.py
-│   │   │   ├── OnReaction.py
-│   │   │   ├── OnReady.py
-│   │   │   ├── SlashTest.py
-│   │   │   └── TestCommand.py
-│   │   ├── configs/
-│   │   │   └── config.py
-│   │   ├── libs/
-│   │   │   └── logger.py
-│   │   └── main.py
-│   ├── requirements.txt
-│   └── supervisord.conf
-└── Readme.md
+```
+pip install requirements.txt
+python main.py
+```
