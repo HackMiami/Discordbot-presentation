@@ -4,15 +4,17 @@ Slides:
 
 - https://docs.google.com/presentation/d/1xCEXvK5QcWgNO2mXJpSJKhHBGgcWbjrS-784hCxUAzI/edit?usp=sharing
 
-
 To use this on your server update TOKEN, GUILD_ID and ROLE_ID in config/config.py
+
 Enjoy and happy programming
 
 ## Other examples from the developer
-https://github.com/Rapptz/discord.py/tree/master/examples
+- https://github.com/Rapptz/discord.py/tree/master/examples
 
-Joing the discord.py server
-https://discord.gg/dpy
+- https://discordpy.readthedocs.io/en/latest/index.html
+
+## Discord servers
+Joing the discord.py server https://discord.gg/dpy
 
 
 ## With Docker compose
