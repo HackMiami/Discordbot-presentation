@@ -7,6 +7,10 @@ class PrefixTest(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
 
+    @commands.command(name='ping', description='ping test')
+    async def ping(self, ctx) -> None:
+        await ctx.send(f'Pong! Latency: {round(self.bot.latency * 1000)}ms')
+
     @commands.command(name='prefixtest', description='testing prefix commands')
     async def test(self, ctx) -> None:
         await ctx.send('This is a Test.')
