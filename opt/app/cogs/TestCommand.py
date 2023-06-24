@@ -17,7 +17,7 @@ class PrefixTest(commands.Cog):
 
     @commands.command(name='argTest', aliases=['argumetentTest'],
                       pass_context=True, description='argumetent_Test prefix commands')
-    async def hush(ctx, arg1=None) -> None:
+    async def hush(self, ctx, arg1=None) -> None:
         '''
         !argTest "arg1"
         '''
