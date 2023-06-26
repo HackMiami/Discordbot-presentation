@@ -26,6 +26,7 @@ docker compose up -d
 docker compose logs
 ```
 ### if you want to jump into the image to test
+
 ```
 docker compose exec -it bot bash
 ```
@@ -42,13 +43,12 @@ docker run --rm -v logs:/var/logs discord-bot
 
 ```
 python -m ensurepip
-pip install virtualenv
-virtualenv discordbot
-source discordbot/bin/activate
+python -m venv .venv
+source pyenv/bin/activate
 ```
 
 #### install requirements and run the bot.
 ```
-pip install requirements.txt
+pip install -r opt/requirements.txt
 python main.py
 ```
