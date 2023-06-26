@@ -4,7 +4,7 @@ from discord.ext import commands
 
 class MyBot(commands.Bot):
     def __init__(self, command_prefix, intents):
-        super().__init__(command_prefix, intents=discord.Intents.all())
+        super().__init__(command_prefix, intents=intents)
 
     async def on_ready(self):
         print(f'Logged in as {self.user.name} ({self.user.id})')
@@ -21,4 +21,4 @@ class MyBot(commands.Bot):
 
 bot = MyBot(command_prefix='!', intents=discord.Intents.all())
 
-bot.run(token='MTEyMDUwMzk4NzM2MDI1NjAyMA.GtI7WL.YSR4nRy2ZIezm9u3YDOsId6S95hmRWp21PBThI')
+bot.run(token='TOKEN')
