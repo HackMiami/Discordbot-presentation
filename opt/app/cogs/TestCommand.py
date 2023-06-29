@@ -7,17 +7,16 @@ class PrefixTest(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
 
+    # This is a prefix command.
+    # !ping will return "Pong! Latency: {int}ms"
     @commands.command(name='ping', description='ping test')
     async def ping(self, ctx) -> None:
         await ctx.send(f'Pong! Latency: {round(self.bot.latency * 1000)}ms')
 
-    @commands.command(name='prefixtest', description='testing prefix commands')
-    async def test(self, ctx) -> None:
-        await ctx.send('This is a Test.')
-
+    # This is a prefix command that takes positional arguments. !argTest "arg1"
     @commands.command(name='argTest', aliases=['argumetentTest'],
                       pass_context=True, description='argumetent_Test prefix commands')
-    async def hush(self, ctx, arg1=None) -> None:
+    async def argsTest(self, ctx, arg1=None) -> None:
         '''
         !argTest "arg1"
         '''

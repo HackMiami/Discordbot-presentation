@@ -15,19 +15,27 @@ def get_image():
     return BytesIO(response.content)
 
 
+# Slash Test
+
 class SlashTest(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
 
+    # Slash Command Test ping command with ephemeral response
+    # This is a simple ping command /ping that will respond with a message that says Pong! Latency: {latency}ms
+    @app_commands.command(name='ping', description='ping test')
+    async def ping(self, interaction: discord.Interaction) -> None:
+        await interaction.response.send_message(f'Pong! Latency: {round(self.bot.latency * 1000)}ms', ephemeral=True)
+
+    # Slash Command Example with a string and integer argument
+    # This is a simple test command /slashtest that takes in a string and an integer
+    # and responds with a message that says I am working {string}, your num is {integer}
     @app_commands.command(name='slashtest', description='testing slash commands')
     async def test(self, interaction: discord.Interaction, name: str, num: int) -> None:
         await interaction.response.send_message(f"I am working {name}, your num is {num}", ephemeral=True)
 
-
-class ChoiceTest(commands.Cog):
-    def __init__(self, bot: commands.Bot) -> None:
-        self.bot = bot
-
+    # Slash command example with a choice selection
+    # This command /choicetest takes in a choice selection and responds with a message for the choice selected
     @app_commands.checks.has_any_role(ROLE_ID)
     @app_commands.command(name='choicetest', description='testing slash choice commands')
     @app_commands.describe(fruits='fruits to choose from')
@@ -51,7 +59,10 @@ class ChoiceTest(commands.Cog):
         logger.error(f"This error was handled with options: {error}")
 
 
+# Slash Group Test
+# This is an example of grouping commands under /parent that has two sub commands /parent sub-1 and /parent sub-2
 class SlashGroup(commands.GroupCog, name="parent"):
+    # This is an example of grouping commands under /parent that has a sub command /parent child child-1
     child = app_commands.Group(name='child', description='child commands')
 
     def __init__(self, bot: commands.Bot) -> None:
@@ -76,5 +87,4 @@ class SlashGroup(commands.GroupCog, name="parent"):
 
 async def setup(bot: commands.Bot) -> None:
     await bot.add_cog(SlashTest(bot), guilds=[discord.Object(id=GUILD_ID)])
-    await bot.add_cog(ChoiceTest(bot), guilds=[discord.Object(id=GUILD_ID)])
     await bot.add_cog(SlashGroup(bot), guilds=[discord.Object(id=GUILD_ID)])
