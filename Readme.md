@@ -14,6 +14,9 @@ Enjoy and happy programming
 
 - https://discordpy.readthedocs.io/en/latest/index.html
 
+### Other examples
+- https://gist.github.com/EvieePy/d78c061a4798ae81be9825468fe146be
+-
 ## Discord servers
 Joing the discord.py server https://discord.gg/dpy
 

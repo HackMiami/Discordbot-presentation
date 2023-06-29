@@ -26,6 +26,10 @@ class OnReady(commands.Cog):
         logger.info('Cmd Prefix: ' + bot.command_prefix)
         logger.info('------')
 
+        logger.info('Loaded extensions (cogs):')
+        for extension in bot.extensions:
+            logger.info(extension)
+
 
 async def setup(bot: commands.Bot) -> None:
     await bot.add_cog(OnReady(bot), guilds=[discord.Object(id=GUILD_ID)])
