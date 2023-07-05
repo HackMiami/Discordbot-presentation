@@ -61,28 +61,21 @@ class SlashTest(commands.Cog):
 
 # Slash Group Test
 # This is an example of grouping commands under /parent that has two sub commands /parent sub-1 and /parent sub-2
-class SlashGroup(commands.GroupCog, name="parent"):
+class SlashGroup(commands.GroupCog, name="parent0"):
     # This is an example of grouping commands under /parent that has a sub command /parent child child-1
-    child = app_commands.Group(name='child', description='child commands')
+    child = app_commands.Group(name='child0', description='child commands')
 
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
         super().__init__()
 
-    @child.command(name="child-1")
+    @child.command(name="child0-cmd")
     async def child_sub_command_1(self, interaction: discord.Interaction) -> None:
-        """ /parent sub-1 """
         await interaction.response.send_message("Hello from child command 1", ephemeral=True)
 
-    @app_commands.command(name="sub-1")
+    @app_commands.command(name="parent0-cmd")
     async def my_sub_command_1(self, interaction: discord.Interaction) -> None:
-        """ /parent sub-1 """
         await interaction.response.send_message("Hello from sub command 1", ephemeral=True)
-
-    @app_commands.command(name="sub-2")
-    async def my_sub_command_2(self, interaction: discord.Interaction) -> None:
-        """ /parent sub-2 """
-        await interaction.response.send_message("Hello from sub command 2", ephemeral=True)
 
 
 async def setup(bot: commands.Bot) -> None:
